@@ -14,6 +14,8 @@ require_once 'classes/LanguageGame.php';
 // require_once 'classes/Player.php'; // Only needed for extra's
 require_once 'classes/Word.php';
 
+echo "<h1>Translate FR to EN</h1>";
+
 // Start the game
 $game = new LanguageGame();
 $game->run();

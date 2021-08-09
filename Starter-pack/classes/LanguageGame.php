@@ -6,12 +6,15 @@ class LanguageGame
 
     public function __construct()
     {
+        $this->words = Data::words();
+        // var_dump($this->words);
         // :: is used for static functions
         // They can be called without an instance of that class being created
         // and are used mostly for more *static* types of data (a fixed set of translations in this case)
         foreach (Data::words() as $frenchTranslation => $englishTranslation) {
             // TODO: create instances of the Word class to be added to the words array
         }
+       
     }
 
     public function run()
@@ -20,6 +23,9 @@ class LanguageGame
 
         // Option A: user visits site first time (or wants a new word)
         // TODO: select a random word for the user to translate
+        $randomWord = array_rand($this->words);
+        // var_dump($randomWord);
+        echo $randomWord;
 
         // Option B: user has just submitted an answer
         // TODO: verify the answer (use the verify function in the word class) - you'll need to get the used word from the array first
