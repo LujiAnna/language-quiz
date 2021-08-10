@@ -27,16 +27,6 @@ function whatIsHappening()
 
 whatIsHappening();
 
-# post method for sensitive data
-$answer = $_POST['answer'];
-# Check if amount field is 0, empty, or not set at all'
-# Read more: https://www.php.net/manual/en/function.empty.php
-if (empty($answer)) {
-  # If the field is empty, display a message to the user
-  echo " <br/> Please fill in the answer";
-  # Process the form data if the input field is not empty
-} 
-
 // Load your classes
 require_once 'classes/Data.php';
 require_once 'classes/LanguageGame.php';

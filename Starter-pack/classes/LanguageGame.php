@@ -2,9 +2,10 @@
 
 class LanguageGame
 {
-    private array $words;
+    private array $words = [];
     // public Word $randomWord;
     public string $randomWord;
+    public string $answer;
 
     public function __construct()
     {
@@ -27,7 +28,8 @@ class LanguageGame
 
         // ! ERROR, an extra empty object 
         // var_dump($this->words); // array(9) { ["pain"]=> string(5) "bread" [
-    }
+    
+        }
 
     public function run()
     {
@@ -48,12 +50,30 @@ class LanguageGame
         // get the value using the key-word chosen
         // $array[$key];
 
-        echo $this->words[$randomWord];
-        
+        // get the answer from the array
+        $this->answer = $this->words[$randomWord];
+        echo $this->answer;
+
+        // check if form submission 
+        if (isset($_POST['translate'])) {
+            # Check if amount field is 0, empty, or not set at all'
+            if (empty($_POST['answer'])) {
+                echo " <br/> Please fill in the answer";
+            } else {
+            // $result = verify($answer);
+
+            }
+        }
+
+        // TODO: pass this answer to the verify function to be verified
+        // $verify -> $this->word;
+        // $verify-> verify($this->words[$randomWord]);
+
 
         // TODO: generate a message for the user that can be shown
     
 
         // TODO: add the random word value
+
     }
 }
