@@ -9,9 +9,9 @@
 </head>
 <body>
 	<!-- TODO: add a form for the user to play the game -->
-	<form action="">
-	<input type="text">
-	<button>Translate</button>
+	<form action="" method='post'>
+	<input type="text" id="answer" name="answer" value="<?php echo $_SESSION['answer'] ?? '' ?>"/>
+	<button type="submit" name='translate'>Translate!</button>
 	</form>
 </body>
 </html>
